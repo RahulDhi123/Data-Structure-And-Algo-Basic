@@ -25,3 +25,6 @@ int main(){
     int ans=Mountain(arr,0,9);
     cout<<ans;
 }
+
+
+

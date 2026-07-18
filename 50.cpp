@@ -14,6 +14,7 @@ int main(){
     s.insert(2);
     s.insert(1);
     s.insert(0);
+    s.insert(6);
 
 
     cout<<s.size()<<endl;
@@ -33,4 +34,15 @@ int main(){
     for(int i:s){
         cout<<i<<endl;
     }
+
+
+    cout<<"5 is present or not:"<<s.count(5)<<endl;
+    cout<<"-5 is present or not:"<<s.count(-5)<<endl;
+
+    set<int>::iterator itr=s.find(5);
+
+    for(auto it=itr;it!=s.end();it++){
+          cout<<*it<<" ";
+    }
+    cout<<endl;
 }

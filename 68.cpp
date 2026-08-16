@@ -1,27 +1,30 @@
-// CHARACTER ARRAY (POINTERS)
 #include<iostream>
 using namespace std;
-int main(){
-// int arr[10]={1,2,3,4,5,6,7,8,9,10};
-// cout<<arr<<endl;                        // PRINTS ADDRESS
 
-// char ch[30]="rahul";
-// cout<<ch<<endl;                         // PRINTS ARRAY
+ int gcdOfOddEvenSums(int n) {
+        int odd=0;
+        int even=0;
+        int count=0;
+
+         int i=1;
+            int j=2;
+
+        while(count<n){
+           
+
+            odd=odd+i;
+            even =even+j;
+
+            i=i+2;
+            j=j+2;
+
+            count++;
+        }
+
+        cout<<odd<<endl<<even<<endl;
+    }
 
 
-
-
-// int *p=&arr[0];
-// cout<<p<<endl;
-
-// char *c=&ch[0];
-// cout<<c<<endl;
-
-
-char temp='z';
-char*t=&temp;
-cout<<t<<endl;
-
-
-
-}
+    int main(){
+        gcdOfOddEvenSums(4);
+    }

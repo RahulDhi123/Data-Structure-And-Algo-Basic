@@ -1,74 +1,25 @@
-// OOPS
-
-// OBJECTS ARE ENTITIES IN REAL WORLD 
-// CLASS IS A BLUEPRINT OF THESE ENTITIES
-
-// ACCESS MODIFIER
-
-// PRIVATE: CAN'T ACCESS METHODS AND PROPERTIES OUTSIDE CLASS.
-// PUBLIC:  CAN BE ACCESSED INSIDE OR OUTSIDE THE CLASS.
-// PROTECTED: CAN BE ACCESSED IN CLASS AND INSIDE DERIVED CLASS.
-
+// BUUBLE SORT
 
 #include<iostream>
-#include<string>
-
 using namespace std;
 
-
-
-
-
-
-class Teacher{
-private:
-     int salary;
-
-
-
-public:
-   // properties,attributes
-   string name;
-   string dept;
-   string subject;
-  
-
-
-   // methods
-
-   void changeDept(string newDept){
-    dept=newDept;
-   }
-
-   // setter
-   void setSal(int s){
-    salary=s;
-   }
-
-   // getter
-
-   void getSal(){
-    cout<<salary<<endl;
-   }
-};
-
-
-
-
-
-
-
-
 int main(){
-Teacher T1;
+   int arr[10]={6,3,9,10,1,8,7,5,2,4};
 
+   for(int i=0;i<9;i++){
+      int swapped=0;
+      for(int j=1;j<10-i;j++){
+         if(arr[j-1]>arr[j]){
+            swap(arr[j-1],arr[j]);
+            swapped=1;
+         }
+      }
+      if(swapped==0){
+         break;
+      }
+   }
 
-T1.name="nandi";
-T1.subject="MI";
-T1.dept="EE";
-// T1.salary=90000;   gives error 
-
-cout<<T1.name<<endl;
-T1.setSal(100000);
-T1.getSal();            // we can access private properties by using getter and setter....
+   for(int i=0;i<10;i++){
+      cout<<arr[i]<<endl;
+   }
 }

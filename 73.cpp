@@ -1,41 +1,28 @@
-// THIS PROPERTY IN CONSTRUCTOR
-
-// THIS PROPERTY IS USE TO HIGHLIGHT OBJECT PROPERTY
-// THIS IS A VARIABLE(AUTOMATICALLY CRAETED POINTER) WHICH POINTS TO OBJECT WHO CALLS IT.
+// SORT ARRAY WITH(0,1,2)
 
 #include<iostream>
-#include<string>
-
 using namespace std;
-
-class Teacher{
- public:
-     Teacher(){
-         dept="EE";
-     }
-
-public:
-    Teacher(string name,string dept,string subject,int sal){
-        this->name=name;
-        this->dept=dept;
-        this->subject=subject;
-        this->sal=sal;
-    }
-public:
-    string name;
-    string dept;
-    string subject;
-    int sal;
-
-    void getInfo(){
-        cout<<name<<endl<<dept<<endl<<subject<<endl<<sal<<endl;
-    }
-
-};
-
-
 int main(){
-    Teacher t1("nandi","ee","mi",80000);
-    // cout<<t1.dept<<endl;
-    t1.getInfo();
+    int arr[10]={0,2,0,1,2,2,1,0,0,1};
+    int swapped=0;
+    int count=0;
+    for(int i=0;i<9;i++){
+       
+        for(int j=0;j<10-i;j++){
+            if(arr[j-1]>arr[j]){
+                swap(arr[j],arr[j-1]);
+                swapped=1;
+            }
+           
+        }
+        count++;
+        if(swapped==0){
+            break;
+        }
+        
+
+    }
+    for(int i=0;i<10;i++){
+        cout<<arr[i]<<endl;
+    }
 }

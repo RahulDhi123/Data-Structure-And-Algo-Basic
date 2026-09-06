@@ -1,48 +1,20 @@
-// CONSTRUCTOR
-
-// SPECIAL METHOD INVOKED AUTOMATICALLY AT A TIME OF OBJECT CREATION. USED FOR INITIALISATION
-
-// SAME NAME AS CLASS
-// CONSTRUCTOR DOES NOT HAVE RETURN TYPE
-// ONLY CALLED ONCE(AUTOMATICALLY) AT TIME OF OBJECT CREATION
-// MEMORY ALLOCATION HAPPENS WHEN CONSTRUCTOR IS CALLED
-
-
-// THERE CAN BE PARAMETERISED OR NON PARAMETERISED CONSTRUCTORS OR COPY CONSTRUCTOR
+// INSERTION SORT(O(n^2))
 
 #include<iostream>
-#include<string>
-
 using namespace std;
-
-class Teacher{
- public:
-     Teacher(){
-         dept="EE";
-     }
-
-public:
-    Teacher(string n,string d,string sub,int s){
-        name=n;
-        dept=d;
-        subject=sub;
-        sal=s;
-    }
-public:
-    string name;
-    string dept;
-    string subject;
-    int sal;
-
-    void getInfo(){
-        cout<<name<<endl<<dept<<endl<<subject<<endl<<sal<<endl;
-    }
-
-};
-
-
 int main(){
-    Teacher t1("nandi","ee","mi",80000);
-    // cout<<t1.dept<<endl;
-    t1.getInfo();
+    int arr[5]={4,1,5,2,3};
+
+    for(int i=1;i<5;i++){
+        int curr=arr[i];
+        int prev=i-1;
+        while(prev>=0 && arr[prev]>curr){
+            arr[prev+1]=arr[prev];
+            prev--;
+        }
+        arr[prev+1]=curr;
+    }
+    for(int i=0;i<5;i++){
+        cout<<arr[i]<<endl;
+    }
 }

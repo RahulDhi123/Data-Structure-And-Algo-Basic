@@ -1,25 +1,31 @@
-// PRINT THE TYPE OF ENTERED CHARACTER
-
 #include<iostream>
 using namespace std;
+
 int main(){
-    char x;
-    cout<<"enter any character\n";
+    int arr[4]={-13,-26,46,57};
+    cout<<"The number of bytes taken by array:"<<sizeof(arr)<<endl;
 
-    cin>>x;
+    cout<<endl;
 
-    if('a'<=x && x<='z'){
-        cout<<"This is a lower case";
-    }
-    else if('A'<=x && x<='Z'){
-        cout<<"this is upper case";
-    }
-    else if('0'<=x && x<='9'){
-        cout<<"this is digit";
-    }
-    else{
-        cout<<"this is a special character";
 
+    for(int i=0;i<4;i++){
+        cout<<"Element "<<i+1<<":"<<arr[i]<<endl;
     }
 
+    cout<<endl;
+
+    int min=INT32_MAX,max=INT32_MIN;
+
+    for(int i=0;i<4;i++){
+        if(arr[i]>=max){
+            max=i;
+        }
+        if(arr[i]<=min){
+            min=i;
+        }
+    }
+
+    cout<<"Smallest element:"<<arr[min]<<endl;
+    cout<<"Largest element:"<<arr[max]<<endl;
 }
+

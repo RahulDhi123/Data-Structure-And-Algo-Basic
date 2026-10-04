@@ -1,16 +1,16 @@
-// PRINT NUMBER 1 TO N USING WHILE LOOP
+// LINEAR SEARCH IN ARRAY
 
 #include<iostream>
 using namespace std;
 int main(){
-    int n;
-    cout<<"Enter value of n\n";
-    cin>>n;
-
-    int x=1;
-    while(x<=n){
-        cout<<x<<endl;
-        x++;
+    int arr[10]={9,0,5,6,4,7,1,8,2,3};
+    int x;
+    cout<<"enter element:\n";
+    cin>>x;
+    for(int i=0;i<10;i++){
+        if(arr[i]==x){
+            cout<<"element found\n";
+            break;
+        }
     }
-
 }

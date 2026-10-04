@@ -1,17 +1,28 @@
-// SUM OF FIRST N NATURAL NUMBERS
+// REVERSING AN ARRAY
 
 #include<iostream>
 using namespace std;
 int main(){
-    int sum=0;
-    int n;
-    cout<<"enter value of n"<<endl;
-    cin>>n;
+    int arr[10]={1,2,3,4,5,6,7,8,9,10};
+    int st=0;
+    int end=9;
 
-    int x=1;
-    while(x<=n){
-        sum=sum+x;
-        x++;
+    cout<<"ORIGINAL:\n";
+    for(int i=0;i<10;i++){
+        cout<<arr[i]<<" ";
     }
-    cout<<sum;
+    cout<<endl;
+    while(st<end){
+        swap(arr[st],arr[end]);
+        st++;
+        end--;
+    }
+
+    cout<<"REVERSED:\n";
+    for(int i=0;i<10;i++){
+        cout<<arr[i]<<" ";
+    }
+    cout<<endl;
+
+    
 }

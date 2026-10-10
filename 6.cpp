@@ -1,20 +1,19 @@
-// FIBONACCI SERIES
+// KADANE'S ALGO
+
 
 #include<iostream>
 using namespace std;
 int main(){
-    int a=0;
-    int b=1;
-    int n;
-    cout<<"enter number of terms\n";
-    cin>>n;
-    int sum=0;
-    for(int i=0;i<n;i++){
+    int arr[9]={-2,1,-3,4,-1,2,1,-5,4};
+    int maxSum=INT32_MIN;
+    int currSum=0;
+    for(int i=0;i<9;i++){
+        currSum+=arr[i];
+        maxSum=max(maxSum,currSum);
+        if(currSum<0){
+            currSum=0;
+        }
         
-        sum=a+b;
-        cout<<a;
-        a=b;
-        b=sum;
-
     }
+    cout<<maxSum;
 }

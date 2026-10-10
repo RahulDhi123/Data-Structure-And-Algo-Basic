@@ -1,19 +1,20 @@
-//  SUM OF EVEN NUMBER FROM 1 TO N
+// vectors
 
 #include<iostream>
+#include<vector>
 using namespace std;
 int main(){
-    int sum=0;
-    int n;
-    cout<<"enter value of n\n";
-    cin>>n;
+    vector <int> vec={1,2,3};
+    // vector <int> vec(3,0); means vector have 3 elements having value 0 each
+    vec.push_back(5);
+    vec.push_back(1);
+    vec.push_back(2);
+    vec.push_back(3);
+    vec.push_back(4);
 
-    int i=1;
-    while(i<=n){
-        if(i%2==0){
-            sum=sum+i;
-        }
-        i++;
+    for(int i=0;i<vec.size();i++){
+        cout<<vec[i]<<" ";
     }
-    cout<<sum;
+
+
 }
